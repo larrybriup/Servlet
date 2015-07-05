@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>Test1</servlet-name>
+    <servlet-class>com.eagle.servlet.ServletTest1</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ServletTest2</servlet-name>
+    <servlet-class>com.eagle.servlet.ServletTest2</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ServletTest3</servlet-name>
+    <servlet-class>com.eagle.servlet.ServletTest3</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ServletLifeTest</servlet-name>
+    <servlet-class>com.eagle.servlet.ServletLifeTest</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ParamServletTest</servlet-name>
+    <servlet-class>com.eagle.servlet.ParamServletTest</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MessyServletTest</servlet-name>
+    <servlet-class>com.eagle.servlet.MessyServletTest</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DispatcherServletTest</servlet-name>
+    <servlet-class>com.eagle.servlet.DispatcherServletTest</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OtherServletTest</servlet-name>
+    <servlet-class>com.eagle.servlet.OtherServletTest</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RedirectServletTest</servlet-name>
+    <servlet-class>com.eagle.servlet.RedirectServletTest</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PathServletTest</servlet-name>
+    <servlet-class>com.eagle.servlet.PathServletTest</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ServletRequestTest</servlet-name>
+    <servlet-class>com.eagle.servlet.ServletRequestTest</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ScopeServletTest</servlet-name>
+    <servlet-class>com.eagle.servlet.ScopeServletTest</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SessionServletTest</servlet-name>
+    <servlet-class>com.eagle.servlet.SessionServletTest</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ApplicatonServletTest</servlet-name>
+    <servlet-class>com.eagle.servlet.ApplicatonServletTest</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PrintNumServlet</servlet-name>
+    <servlet-class>com.eagle.servlet.PrintNumServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Test1</servlet-name>
+    <url-pattern>/servlet1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletTest2</servlet-name>
+    <url-pattern>/servlet2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletTest3</servlet-name>
+    <url-pattern>/servlet3</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletLifeTest</servlet-name>
+    <url-pattern>/servletlife</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ParamServletTest</servlet-name>
+    <url-pattern>/ParamServletTest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MessyServletTest</servlet-name>
+    <url-pattern>/MessyServletTest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DispatcherServletTest</servlet-name>
+    <url-pattern>/DispatcherServletTest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OtherServletTest</servlet-name>
+    <url-pattern>/OtherServletTest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RedirectServletTest</servlet-name>
+    <url-pattern>/RedirectServletTest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PathServletTest</servlet-name>
+    <url-pattern>/PathServletTest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletRequestTest</servlet-name>
+    <url-pattern>/ServletRequestTest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ScopeServletTest</servlet-name>
+    <url-pattern>/ScopeServletTest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SessionServletTest</servlet-name>
+    <url-pattern>/SessionServletTest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ApplicatonServletTest</servlet-name>
+    <url-pattern>/ApplicatonServletTest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PrintNumServlet</servlet-name>
+    <url-pattern>/PrintNumServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddCookieServlet</display-name>
+    <servlet-name>AddCookieServlet</servlet-name>
+    <servlet-class>com.eagle.servlet.AddCookieServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddCookieServlet</servlet-name>
+    <url-pattern>/AddCookieServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ShowCookieServlet</display-name>
+    <servlet-name>ShowCookieServlet</servlet-name>
+    <servlet-class>com.eagle.servlet.ShowCookieServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowCookieServlet</servlet-name>
+    <url-pattern>/ShowCookieServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EncodingURLServlet</display-name>
+    <servlet-name>EncodingURLServlet</servlet-name>
+    <servlet-class>com.eagle.servlet.EncodingURLServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EncodingURLServlet</servlet-name>
+    <url-pattern>/EncodingURLServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GetDataServlet</display-name>
+    <servlet-name>GetDataServlet</servlet-name>
+    <servlet-class>com.eagle.servlet.GetDataServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetDataServlet</servlet-name>
+    <url-pattern>/GetDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.eagle.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>encodingFilter</filter-name>
+    <filter-class>com.eagle.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>encodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>loginFilter</filter-name>
+    <filter-class>com.eagle.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>loginFilter</filter-name>
+    <url-pattern>/success.html</url-pattern>
+  </filter-mapping>
+  <listener>
+    <listener-class>com.eagle.listener.RequestListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.eagle.listener.SessionListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.eagle.listener.ApplicationListener</listener-class>
+  </listener>
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+  <servlet>
+    <description></description>
+    <display-name>RegisterServlet</display-name>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.eagle.servlet2.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
