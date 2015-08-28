@@ -24,8 +24,10 @@ public class PathServletTest extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 			String page="path/pathA.html";
-			RequestDispatcher rd = req.getRequestDispatcher(page);
-			rd.forward(req, resp);
+//			RequestDispatcher rd = req.getRequestDispatcher(page);
+//			rd.forward(req, resp);
+			
+			resp.sendRedirect(page);
 	}
 
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
