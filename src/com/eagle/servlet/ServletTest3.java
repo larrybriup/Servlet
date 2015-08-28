@@ -17,26 +17,29 @@ public class ServletTest3 extends HttpServlet {
 	 *
 	 * This method is called when a form has its tag value method equals to get.
 	 * 
-	 * @param request the request send by the client to the server
-	 * @param response the response send by the server to the client
-	 * @throws ServletException if an error occurred
-	 * @throws IOException if an error occurred
+	 * @param request
+	 *            the request send by the client to the server
+	 * @param response
+	 *            the response send by the server to the client
+	 * @throws ServletException
+	 *             if an error occurred
+	 * @throws IOException
+	 *             if an error occurred
 	 */
-	public void doGet(HttpServletRequest req, HttpServletResponse res)
-			throws ServletException, IOException {
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		res.setContentType("image/png");
-		ServletOutputStream out = res.getOutputStream();
-		InputStream in= ServletTest3.class.getResourceAsStream("3.png");
-		
-		byte[] buf=new byte[1024];
-		int len=0;
-		int i=0;
-		while((len=in.read(buf))!=-1) {
+		resp.setContentType("image/png");
+		ServletOutputStream out = resp.getOutputStream();
+		InputStream in = ServletTest3.class.getResourceAsStream("3.png");
+
+		byte[] buf = new byte[1024];
+		int len = 0;
+		int i = 0;
+		while ((len = in.read(buf)) != -1) {
 			out.write(buf, 0, len);
 			i++;
 		}
-		System.out.println("i="+i);
+		System.out.println("size i=" + i);
 		out.flush();
 		out.close();
 		in.close();
@@ -45,20 +48,24 @@ public class ServletTest3 extends HttpServlet {
 	/**
 	 * The doPost method of the servlet. <br>
 	 *
-	 * This method is called when a form has its tag value method equals to post.
+	 * This method is called when a form has its tag value method equals to
+	 * post.
 	 * 
-	 * @param request the request send by the client to the server
-	 * @param response the response send by the server to the client
-	 * @throws ServletException if an error occurred
-	 * @throws IOException if an error occurred
+	 * @param request
+	 *            the request send by the client to the server
+	 * @param response
+	 *            the response send by the server to the client
+	 * @throws ServletException
+	 *             if an error occurred
+	 * @throws IOException
+	 *             if an error occurred
 	 */
-	public void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
+					IOException {
 
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		out
-				.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
+		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
 		out.println("<HTML>");
 		out.println("  <HEAD><TITLE>A Servlet</TITLE></HEAD>");
 		out.println("  <BODY>");

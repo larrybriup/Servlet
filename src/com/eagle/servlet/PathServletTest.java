@@ -26,8 +26,6 @@ public class PathServletTest extends HttpServlet {
 			String page="path/pathA.html";
 			RequestDispatcher rd = req.getRequestDispatcher(page);
 			rd.forward(req, resp);
-			
-		
 	}
 
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)

@@ -15,12 +15,13 @@ public class ServletRequestTest extends HttpServlet {
 			throws ServletException, IOException {
 		//把值保存到request对象中key value
 		//						 String Object
-		req.setAttribute("msg", "Hello Kitty!");
+		req.setAttribute("msg", "Hello Request!");
 		String page="ScopeServletTest";
-//		RequestDispatcher rd = req.getRequestDispatcher(page);
-//		rd.forward(req, resp);
-		resp.sendRedirect(page);
+		RequestDispatcher rd = req.getRequestDispatcher(page);
+		rd.forward(req, resp);
 		
+		// don't pass req attr this way, req's scope
+//		resp.sendRedirect(page);
 	}
 
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)

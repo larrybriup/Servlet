@@ -7,13 +7,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.eagle.service.IUserService;
 import com.eagle.service.bean.User;
 import com.eagle.service.impl.UserServiceImpl;
 
 public class RegisterServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
 	private IUserService service= new UserServiceImpl();
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		//接受参数
@@ -39,11 +39,10 @@ public class RegisterServlet extends HttpServlet {
 			page="/error.html";
 			req.setAttribute("msg", e.getMessage());
 		}
+		
 		//进行跳转
 		RequestDispatcher rd = req.getRequestDispatcher(page);
 		rd.forward(req, resp);
-		
-		
 	}
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

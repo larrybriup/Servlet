@@ -18,22 +18,25 @@ public class LoginFilter implements Filter{
 		
 	}
 
-	public void doFilter(ServletRequest req, ServletResponse resp,
+	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain chain) throws IOException, ServletException {
-		HttpServletRequest request=(HttpServletRequest) req;
-		HttpServletResponse response=(HttpServletResponse) resp;
 		
-		HttpSession session = request.getSession();
+		System.out.println("in LoginFilter"+"\n");
+		
+		HttpServletRequest req=(HttpServletRequest) request;
+		HttpServletResponse resp=(HttpServletResponse) response;
+		
+		HttpSession session = req.getSession();
 		Object o= session.getAttribute("isLogin");
 		if(o==null){
-			response.sendRedirect("Message.html");
+			resp.sendRedirect("message.html");
 		}
 		if(o!=null){
 			String s=(String)o;
 			if("yes".equals(s)){
-				chain.doFilter(request, response);
+				chain.doFilter(req, resp);
 			}else{
-				response.sendRedirect("Message.html");
+				resp.sendRedirect("message.html");
 			}
 		}
 		

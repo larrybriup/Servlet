@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class RedirectServletTest extends HttpServlet {
 
@@ -15,9 +16,11 @@ public class RedirectServletTest extends HttpServlet {
 			throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 		String name = req.getParameter("name");
-		System.out.println("in RedirectServletTest name="+name);
+		System.out.println("in RedirectServletTest name="+name+"\n");
 		String page="";
-		if("大超".equals(name)) {
+		if("larry".equals(name)) {
+			HttpSession session = req.getSession();
+			session.setAttribute("isLogin", "yes");
 			page="success.html";
 		}else {
 			page="error.html";

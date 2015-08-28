@@ -12,24 +12,21 @@ import javax.servlet.ServletResponse;
 public class EncodingFilter implements  Filter{
 
 	public void destroy() {
-		System.out.println("destroy");
-		
+		System.out.println("EncodingFilter destroyed"+"\n");
 	}
 
 	public void doFilter(ServletRequest req, ServletResponse resp,
 			FilterChain chain) throws IOException, ServletException {
-		System.out.println("in doFilter");
+		System.out.println("in EncodingFilter.doFilter");
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
 		
 		//过滤器放行
 		chain.doFilter(req, resp);
-		
 	}
 
 	public void init(FilterConfig conf) throws ServletException {
 		System.out.println("in EncodingFilter");
-		
 	}
 
 }

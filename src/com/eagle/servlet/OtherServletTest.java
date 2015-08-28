@@ -15,7 +15,7 @@ public class OtherServletTest extends HttpServlet {
 			throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 		String name = req.getParameter("name");
-		System.out.println(" in OtherServletTest name="+name);
+		System.out.println(" in OtherServletTest name="+name+"\n");
 		String page="";
 //		if("大超".equals(name)) {
 //			page="/success.html";

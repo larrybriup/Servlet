@@ -38,7 +38,6 @@ public class PrintNumServlet extends HttpServlet {
 			num=(Integer)obj;
 			num++;
 			application.setAttribute("num", num);
-			
 		}
 		PrintWriter out = resp.getWriter();
 		out.println("<html>");

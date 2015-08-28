@@ -9,13 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class ApplicatonServletTest extends HttpServlet {
+public class ServletApplicatonTest extends HttpServlet {
 @Override
 protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 		throws ServletException, IOException {
 	ServletContext applicattion = req.getSession().getServletContext();
 	
-	applicattion.setAttribute("msg", "world");
+	applicattion.setAttribute("msg", "Hello Applcation!");
 	
 	String page="ScopeServletTest";
 	resp.sendRedirect(page);

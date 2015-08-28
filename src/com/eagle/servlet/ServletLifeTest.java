@@ -10,25 +10,26 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ServletLifeTest extends HttpServlet {
 
+	public ServletLifeTest() {
+		System.out.println("in LifeServletTest() constructor");
+	}
 
-	 public ServletLifeTest() {
-		System.out.println("in LifeServletTest()");
+	public void init() throws ServletException {
+		System.out.println("in LifeServletTest init()");
 	}
-	public void init() throws ServletException{
-		System.out.println("init()");
-	}
+
 	public void destroy() {
-		System.out.println("destroy()");
+		System.out.println("in LifeServletTest destroy()");
 	}
-	protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,
+					IOException {
 		System.out.println("in LifeServletTest doGet");
-		
 	}
 
-	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
+					IOException {
+		System.out.println("in LifeServletTest doPost");
 	}
-
 
 }

@@ -13,8 +13,8 @@ public class MessyServletTest extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
 		String name = req.getParameter("name");
-		System.out.println("name=" + name);
-
+		System.out.println("\n"+"in MessyServletTest.doGet name=" + name+"\n");
+		doPost(req, res);
 	}
 
 	public void doPost(HttpServletRequest req, HttpServletResponse res)
@@ -24,7 +24,7 @@ public class MessyServletTest extends HttpServlet {
 		res.setCharacterEncoding("UTF-8");
 		res.setContentType("text/html;charset=utf-8");
 		String name = req.getParameter("name");
-		System.out.println("name=" + name);
+		System.out.println("in MessyServletTest.doPost name=" + name);
 
 		PrintWriter out = res.getWriter();
 

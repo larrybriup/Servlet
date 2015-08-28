@@ -12,11 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 public class DispatcherServletTest extends HttpServlet {
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse res)
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 		String name=req.getParameter("name");
-		System.out.println("in dispatcherServletTest name="+name);
+		System.out.println("in dispatcherServletTest name="+name+"\n");
 		String page="";
 //		if("大超".equals(name)) {
 //			page="/success.html";
@@ -27,7 +27,7 @@ public class DispatcherServletTest extends HttpServlet {
 		//获得一个跳转对象,服务器内部跳转
 		RequestDispatcher rd = req.getRequestDispatcher(page);
 		//跳转
-		rd.forward(req, res);
+		rd.forward(req, resp);
 		
 	}
 	@Override
